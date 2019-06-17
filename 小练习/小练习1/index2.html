@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			.container{
+				width: 600px;
+				height: 400px;
+				border: 1px solid black;
+				top: 100px;
+				left: 200px;
+				position: absolute
+			}
+			.container div{
+				width: 100px;
+				height: 300px;
+				border: 1px solid ;
+				position: absolute;/*绝对定位，参照外层最近一个定位的父元素*/
+				border-radius: 50px;/**/
+				top: 50px;
+				left: 200px;
+				transition: all 1.5s;/*过渡*/
+			}
+			.container:hover div:nth-child(1){/*当鼠标悬浮时*/
+				transform: rotate(30deg);/*顺时针旋转30度*/
+			}
+			.container:hover div:nth-child(2){/*当鼠标悬浮时*/
+				transform: rotate(60deg);/*旋转60度*/
+			}
+			.container:hover div:nth-child(4){/*当鼠标悬浮时*/
+				transform: rotate(-30deg);/*逆时针旋转30度*/
+			}
+			.container:hover div:nth-child(5){/*当鼠标悬浮时*/
+				transform: rotate(-60deg);/*旋转60度*/
+			}
+			.container div:nth-child(1){
+				background: red;
+				/*z-index: 50;*/
+			}
+			.container div:nth-child(2){
+				background: blue;
+			}
+			.container div:nth-child(3){
+				background: green;
+			}
+			.container div:nth-child(4){
+				background: yellow;
+			}
+			.container div:nth-child(5){
+				background: black;
+			}
+			.translate{
+				width: 200px;
+				height: 200px;
+				background: red;
+				border: 1px solid red;
+				animation:go 3s linear infinite;/*调用动画规则，参数分别表示规则名称，一个周期的时间，匀速，无限次*/
+			}
+			/*动画开始*//*动画结束*/
+			/*@keyframes go{/*制定动画规则
+				from{transform:translate(0px)}
+				to{transform:translate(600px)}
+			}*/
+			@keyframes go{/*制定动画规则*/
+				0%{transform:translate(0px)}/*动画开始*/
+				50%{transform:translate(600px)}/*动画运行到一半*/
+				100%{transform:translate(0px)}/*动画结束*/
+			}
+			
+			@keyframes rotate{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			.img{  
+				animation: rotate 1s linear infinite;
+			}
+			.img:hover{/*当鼠标悬浮暂停*/
+				animation-play-state: paused;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+		</div>
+		<hr color="red" />
+		<div class="translate">平移</div>
+		<img src="img/fengche.png" class="img"/>
+	</body>
+</html>

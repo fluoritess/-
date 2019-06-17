@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.*{
+				margin: 0;
+				padding: 0;
+			}
+			.fengche{
+				position: relative;
+				margin: auto;
+				display: block;
+			}
+			.bracket{
+				position: relative;
+				margin: auto;
+				display: block;
+				top:-350px;
+				
+			}
+			.bracketsmall{
+				position: relative;
+				margin: auto;
+				display: block;
+				top:-800px;
+			}
+			.title{
+				position: relative;
+				margin: auto;
+				display: block;
+				top:-1300px;
+			}
+			.big-title{
+				position: relative;
+				margin: auto;
+				display: block;
+				top:-1650px;
+			}
+			.container{
+				animation: rota 5s linear infinite;
+			}
+			@keyframes  rota{
+				from{transform: :rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			.boy{
+				position: absolute;
+				top:400px;
+				left: 500px;
+				animation: rota2 5s linear infinite;
+			}
+			.girl{
+				position: absolute;
+				top:700px;
+				left: 750px;
+				animation: rota2 5s linear infinite;
+			}
+			.hairboy{
+				position: absolute;
+				top:700px;
+				left: 1000px;
+				animation: rota2 5s linear infinite;
+			}
+			.girls{
+				position: absolute;
+				top:400px;
+				left: 1250px;
+				animation: rota2 5s linear infinite;
+			}
+			.mimi{
+				position: absolute;
+				top:0px;
+				left: 1150px;
+				animation: rota2 5s linear infinite;
+			}
+			.shamegirl{
+				position: absolute;
+				top:0px;
+				left: 600px;
+				animation: rota2 5s linear infinite;
+			}
+			.mudog{
+				position: absolute;
+				top:-100px;
+				left: 800px;
+				animation: rota2 5s linear infinite;
+			}
+			@keyframes  rota2{
+				from{transform: :rotate(0deg);}
+				to{transform: rotate(-360deg);}
+			}
+			/*
+			.container .container_in{
+					animation: rota2 5s linear infinite;
+			}*/
+		</style>
+	</head>
+	<body background="2.jpg">
+		<div class="container">
+			<img src="fsw.png" class="fengche"/>
+			<div class="container_in">
+				<img src="boy.png" class="boy">
+				<img src="girl.png" class="girl"> 
+				<img src="hairboy.png" class="hairboy">
+				<img src="girls.png" class="girls" />
+				<img src="mimi.png" class="mimi" />
+				<img src="shamegirl.png" class="shamegirl" />
+				<img src="mudog.png" class="mudog" />
+			</div>
+		</div>
+		<div class="container2">
+		<img src="bracket.png" class="bracket" />
+		<img src="bracketsmall.png" class="bracketsmall">
+		<img src="title.png" class="title" />
+		<img src="big-title.png" class="big-title">
+		</div>
+	</body>
+</html>
