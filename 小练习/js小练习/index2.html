@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.leftBar{
+				width: 200px;
+				height: 500px;
+				border: 1px solid blue;
+				
+			}
+			.leftBar li{
+				list-style: none;
+				width: 100%;
+				height: 50px;
+				line-height:50px;
+			}
+			.changeStyle{
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="leftBar" id="leftBar">
+			<li>家电</li>
+			<li>手机</li>
+			<li>服饰</li>
+			<li>日化</li>
+			<li>车载用品</li>
+		</div>
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+	<script>
+		window.onload=init;//页面加载完成即执行
+		
+		function init(){
+		var parentDiv=document.getElementById("leftBar");
+		var lis=parentDiv.children;//获取在div内所有li元素
+		for(var i=0;i<lis.length;i++){
+		/*	lis[i].addEventListener("onmouseover",函数名);*/
+			lis[i].onmousemove=function(){
+				this.style.backgroundColor="gold";
+				this.className="changeStyle"
+			}
+			lis[i].onmouseout=function(){
+				this.style.backgroundColor="white";
+				this.style.color="black"
+			}
+		}
+		}
+	
+	</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			.d1{
+				width: 200px;
+				height: 100px;
+				border: 1px solid red;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">向右平移</button>
+		<div class="d1"></div>
+		<audio src="">音频文件</audio>
+		<video src="">视频文件</video>
+	</body>
+	<script>
+		document.getElementById("btn").onclick=start;
+		var divObj=document.getElementsByClassName("d1")[0];
+		function moveToRight(){
+			var left=divObj.offsetLeft;//获取元素左边距,不带单位
+			if(left>200){
+				window.clearInterval(r);//清除计时器
+			}
+			divObj.style.marginLeft=left+1+"px";
+		}
+		
+		function start(){
+			//每隔10毫秒调用一次moveToRight函数。运行过程中会生成一个整数序列号，
+			window.r=window.setInterval("moveToRight()",10);//使用window对象定义的属性为全局属性
+		}
+		
+		//setTimeout("函数名",时间);//定时器，过了多少时间就执行某函数，只执行一次
+		
+		
+	</script>
+</html>
